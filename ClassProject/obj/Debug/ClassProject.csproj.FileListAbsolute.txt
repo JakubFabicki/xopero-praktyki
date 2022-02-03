@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\bin\Debug\ClassProject.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\bin\Debug\ClassProject.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\bin\Debug\ClassProject.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\ClassProject\obj\Debug\ClassProject.pdb

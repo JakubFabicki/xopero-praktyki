@@ -16,5 +16,15 @@ namespace ClassProject
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int len = Talker.BlahBlahBlah(textBox1.Text, (int)numericUpDown1.Value);
+            MessageBox.Show("Długość wiadomości to " + len);
+        }
     }
 }
