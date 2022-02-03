@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\bin\Debug\Krystyna.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\bin\Debug\Krystyna.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\bin\Debug\Krystyna.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Krystyna\obj\Debug\Krystyna.pdb
