@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xopero-praktyki", "xopero-p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassProject", "ClassProject\ClassProject.csproj", "{9C92E845-EE1A-4CF3-B28E-845B50ABA428}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guy", "Guy\Guy.csproj", "{5B844262-0D82-47C8-92AE-14B1BA4C73AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9C92E845-EE1A-4CF3-B28E-845B50ABA428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C92E845-EE1A-4CF3-B28E-845B50ABA428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C92E845-EE1A-4CF3-B28E-845B50ABA428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B844262-0D82-47C8-92AE-14B1BA4C73AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B844262-0D82-47C8-92AE-14B1BA4C73AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B844262-0D82-47C8-92AE-14B1BA4C73AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B844262-0D82-47C8-92AE-14B1BA4C73AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\bin\Debug\Guy.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\bin\Debug\Guy.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\bin\Debug\Guy.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Guy\obj\Debug\Guy.Form1.resources
