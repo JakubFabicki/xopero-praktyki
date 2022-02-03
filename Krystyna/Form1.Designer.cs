@@ -39,7 +39,17 @@ namespace Krystyna
             // 
             // NumUp
             // 
-            this.NumUp.Location = new System.Drawing.Point(15, 26);
+            this.NumUp.Location = new System.Drawing.Point(12, 46);
+            this.NumUp.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.NumUp.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NumUp.Name = "NumUp";
             this.NumUp.Size = new System.Drawing.Size(120, 20);
             this.NumUp.TabIndex = 0;
@@ -55,7 +65,7 @@ namespace Krystyna
             this.decCbx.AutoSize = true;
             this.decCbx.Checked = true;
             this.decCbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.decCbx.Location = new System.Drawing.Point(15, 52);
+            this.decCbx.Location = new System.Drawing.Point(12, 72);
             this.decCbx.Name = "decCbx";
             this.decCbx.Size = new System.Drawing.Size(126, 17);
             this.decCbx.TabIndex = 1;
@@ -66,7 +76,7 @@ namespace Krystyna
             // healtCbx
             // 
             this.healtCbx.AutoSize = true;
-            this.healtCbx.Location = new System.Drawing.Point(15, 75);
+            this.healtCbx.Location = new System.Drawing.Point(12, 95);
             this.healtCbx.Name = "healtCbx";
             this.healtCbx.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.healtCbx.Size = new System.Drawing.Size(91, 17);
@@ -78,7 +88,7 @@ namespace Krystyna
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 3;
@@ -87,7 +97,7 @@ namespace Krystyna
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(15, 108);
+            this.label2.Location = new System.Drawing.Point(12, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 4;
@@ -98,7 +108,7 @@ namespace Krystyna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(155, 171);
+            this.ClientSize = new System.Drawing.Size(162, 195);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.healtCbx);
