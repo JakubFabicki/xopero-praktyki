@@ -36,6 +36,7 @@ namespace Ul
             this.shiftsNum = new System.Windows.Forms.NumericUpDown();
             this.workBtn = new System.Windows.Forms.Button();
             this.workBeeBox = new System.Windows.Forms.ComboBox();
+            this.moneyBox = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsNum)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +52,9 @@ namespace Ul
             // shiftBtn
             // 
             this.shiftBtn.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.shiftBtn.Location = new System.Drawing.Point(261, 12);
+            this.shiftBtn.Location = new System.Drawing.Point(261, 26);
             this.shiftBtn.Name = "shiftBtn";
-            this.shiftBtn.Size = new System.Drawing.Size(124, 86);
+            this.shiftBtn.Size = new System.Drawing.Size(124, 72);
             this.shiftBtn.TabIndex = 1;
             this.shiftBtn.Text = "Przepracuj następną zmianę";
             this.shiftBtn.UseVisualStyleBackColor = true;
@@ -119,11 +120,21 @@ namespace Ul
             this.workBeeBox.Size = new System.Drawing.Size(151, 21);
             this.workBeeBox.TabIndex = 5;
             // 
+            // moneyBox
+            // 
+            this.moneyBox.AutoSize = true;
+            this.moneyBox.Location = new System.Drawing.Point(300, 9);
+            this.moneyBox.Name = "moneyBox";
+            this.moneyBox.Size = new System.Drawing.Size(41, 13);
+            this.moneyBox.TabIndex = 6;
+            this.moneyBox.Text = "Zmiany";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 304);
+            this.Controls.Add(this.moneyBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.shiftBtn);
             this.Controls.Add(this.raportBox);
@@ -146,6 +157,7 @@ namespace Ul
         private System.Windows.Forms.NumericUpDown shiftsNum;
         private System.Windows.Forms.Button workBtn;
         private System.Windows.Forms.ComboBox workBeeBox;
+        private System.Windows.Forms.Label moneyBox;
     }
 }
 

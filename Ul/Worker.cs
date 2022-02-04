@@ -12,12 +12,12 @@ namespace Ul
         public int ShiftLeft;
 
         private string[] jobsICanDo;
-        private int shiftsToWork;
-        private int shiftsWorked;
+        Bank bank;
 
-        public Worker(string[] task)
+        public Worker(Bank bank, string[] task)
         {
             jobsICanDo = task;
+            this.bank = bank;
         }
 
         public bool DoThisJob(string nextJob, int shiftLeft)
@@ -39,6 +39,7 @@ namespace Ul
         public void WorkOneShift()
         {
             ShiftLeft--;
+            bank.AddMoney();
             if (ShiftLeft == 0)
                 CurrentJob = null;
         }
