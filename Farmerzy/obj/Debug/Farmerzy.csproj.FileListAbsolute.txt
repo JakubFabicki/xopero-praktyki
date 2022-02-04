@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\bin\Debug\Farmerzy.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\bin\Debug\Farmerzy.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\bin\Debug\Farmerzy.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Farmerzy\obj\Debug\Farmerzy.pdb
