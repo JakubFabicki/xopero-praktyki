@@ -1,0 +1,13 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\bin\Debug\netcoreapp3.1\Dziedziczenie.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\bin\Debug\netcoreapp3.1\Dziedziczenie.deps.json
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\bin\Debug\netcoreapp3.1\Dziedziczenie.runtimeconfig.json
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\bin\Debug\netcoreapp3.1\Dziedziczenie.runtimeconfig.dev.json
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\bin\Debug\netcoreapp3.1\Dziedziczenie.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\bin\Debug\netcoreapp3.1\Dziedziczenie.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.AssemblyInfoInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.AssemblyInfo.cs
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Dziedziczenie\Dziedziczenie\obj\Debug\netcoreapp3.1\Dziedziczenie.genruntimeconfig.cache
