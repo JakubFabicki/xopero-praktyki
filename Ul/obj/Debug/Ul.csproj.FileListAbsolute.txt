@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\bin\Debug\Ul.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\bin\Debug\Ul.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\bin\Debug\Ul.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Ul\obj\Debug\Ul.pdb
