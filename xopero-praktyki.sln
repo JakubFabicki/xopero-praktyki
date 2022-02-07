@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ul", "Ul\Ul.csproj", "{232D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "base64", "base64\base64.csproj", "{53707D1F-4D70-4A2F-A725-C204AEE72A33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitLabApi", "GitLabApi\GitLabApi.csproj", "{5E5544DD-5E6C-4D0A-8CE2-A99BBF5F437E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitApi", "GitApi\GitApi.csproj", "{C4A50B39-F073-4E25-9B00-01D6A02C81E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5544DD-5E6C-4D0A-8CE2-A99BBF5F437E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5544DD-5E6C-4D0A-8CE2-A99BBF5F437E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5544DD-5E6C-4D0A-8CE2-A99BBF5F437E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5544DD-5E6C-4D0A-8CE2-A99BBF5F437E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A50B39-F073-4E25-9B00-01D6A02C81E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A50B39-F073-4E25-9B00-01D6A02C81E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A50B39-F073-4E25-9B00-01D6A02C81E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A50B39-F073-4E25-9B00-01D6A02C81E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
