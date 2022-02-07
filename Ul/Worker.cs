@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Ul
 {
-    class Worker
+    class Worker : Bee
     {
         public string CurrentJob;
         public int ShiftLeft;
 
         private string[] jobsICanDo;
-        Bank bank;
 
-        public Worker(Bank bank, string[] task)
+        public Worker(string[] task, double weightMg) : base(weightMg)
         {
             jobsICanDo = task;
-            this.bank = bank;
         }
 
         public bool DoThisJob(string nextJob, int shiftLeft)
@@ -36,12 +34,27 @@ namespace Ul
             else
                 return false;
         }
+
+        private int ShiftWorked;
+
         public void WorkOneShift()
         {
             ShiftLeft--;
-            bank.AddMoney();
+            ShiftWorked++;
             if (ShiftLeft == 0)
+            {
                 CurrentJob = null;
+                ShiftWorked = 0;
+            }
+        }
+
+        const double honeyUnitsPerShiftWorked = .65;
+
+        public override double HoneyConsumptionRate()
+        {
+            double consumption = base.HoneyConsumptionRate();
+            consumption += ShiftWorked * honeyUnitsPerShiftWorked;
+            return consumption;
         }
     }
 }

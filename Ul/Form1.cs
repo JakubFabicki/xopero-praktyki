@@ -13,26 +13,23 @@ namespace Ul
     public partial class Form1 : Form
     {
         private Queen queen;
-        private Bank bank;
 
         public Form1()
         {
             InitializeComponent();
             workBeeBox.SelectedIndex = 0;
-            bank = new Bank();
             Worker[] workers = new Worker[4];
-            workers[0] = new Worker(bank, new string[] { "Zbieranie nektaru", "Wytwarzanie miodu" });
-            workers[1] = new Worker(bank, new string[] { "Pielęgnacja jaj", "Nauczanie pszczółek" });
-            workers[2] = new Worker(bank, new string[] { "Utrzymanie ula", "Patrol z żądłami" });
-            workers[3] = new Worker(bank, new string[] { "Zbieranie nektaru", "Wytwarzanie miodu", "Pielęgnacja jaj", "Nauczanie pszczółek", "Utrzymanie ula", "Patrol z żądłami" });
-            queen = new Queen(workers);
+            workers[0] = new Worker(new string[] { "Zbieranie nektaru", "Wytwarzanie miodu" }, 175);
+            workers[1] = new Worker(new string[] { "Pielęgnacja jaj", "Nauczanie pszczółek" }, 114);
+            workers[2] = new Worker(new string[] { "Utrzymanie ula", "Patrol z żądłami" }, 275);
+            workers[3] = new Worker(new string[] { "Zbieranie nektaru", "Wytwarzanie miodu", "Pielęgnacja jaj", "Nauczanie pszczółek", "Utrzymanie ula", "Patrol z żądłami" }, 149);
+            queen = new Queen(workers, 275);
         }
 
         private void shiftBtn_Click(object sender, EventArgs e)
         {
             queen.WorkTheNextShift();
             raportBox.Text = queen.Raport();
-            moneyBox.Text = bank.Money.ToString();
         }
 
         private void workBtn_Click(object sender, EventArgs e)

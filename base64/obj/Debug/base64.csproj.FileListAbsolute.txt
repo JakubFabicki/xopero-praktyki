@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\bin\Debug\base64.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\bin\Debug\base64.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\bin\Debug\base64.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\base64\obj\Debug\base64.csprojAssemblyReference.cache

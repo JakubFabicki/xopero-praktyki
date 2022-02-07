@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farmerzy", "Farmerzy\Farmer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ul", "Ul\Ul.csproj", "{232DFD0C-7AE9-4E2A-83A0-82179047C330}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "base64", "base64\base64.csproj", "{53707D1F-4D70-4A2F-A725-C204AEE72A33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{232DFD0C-7AE9-4E2A-83A0-82179047C330}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{232DFD0C-7AE9-4E2A-83A0-82179047C330}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{232DFD0C-7AE9-4E2A-83A0-82179047C330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53707D1F-4D70-4A2F-A725-C204AEE72A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
