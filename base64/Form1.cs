@@ -139,9 +139,7 @@ namespace base64
             byte[] buffor2 = new byte[length];
             
             for (int i = 0; i < dataLength; i++)
-            {
                 buffor[i] = CharToSixBit(data[i]);
-            }
 
             byte[] byteTab = new byte[4];
             byte[] tempTab = new byte[4];
@@ -174,9 +172,7 @@ namespace base64
             byte[] result = new byte[resultLength];
 
             for (int i = 0; i < resultLength; i++)
-            {
                 result[i] = buffor2[i];
-            }
 
             return result;
         }
@@ -192,13 +188,9 @@ namespace base64
             };
 
             if ((buffor >= 0) && (buffor <= 63))
-            {
                 return lookupTable[(int)buffor];
-            }
             else
-            {
                 return ' ';
-            }
         }
 
         private byte CharToSixBit(char c)
@@ -212,9 +204,7 @@ namespace base64
             };
 
             if (c == '=')
-            {
                 return 0;
-            }
             else
             {
                 for (int x = 0; x < 64; x++)
