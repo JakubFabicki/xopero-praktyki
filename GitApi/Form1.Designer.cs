@@ -38,6 +38,8 @@ namespace GitApi
             this.button1 = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.CheckedListBox();
+            this.numPage = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             this.SuspendLayout();
             // 
             // idBox
@@ -46,6 +48,7 @@ namespace GitApi
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(288, 20);
             this.idBox.TabIndex = 0;
+            this.idBox.Text = "10825276";
             // 
             // label1
             // 
@@ -71,6 +74,7 @@ namespace GitApi
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.Size = new System.Drawing.Size(254, 20);
             this.tokenBox.TabIndex = 3;
+            this.tokenBox.Text = "glpat-X539X-MgHnwgM_FDiyes";
             // 
             // label3
             // 
@@ -86,9 +90,9 @@ namespace GitApi
             this.projectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.projectBtn.Location = new System.Drawing.Point(12, 360);
             this.projectBtn.Name = "projectBtn";
-            this.projectBtn.Size = new System.Drawing.Size(139, 43);
+            this.projectBtn.Size = new System.Drawing.Size(100, 43);
             this.projectBtn.TabIndex = 7;
-            this.projectBtn.Text = "Pokaż projekty";
+            this.projectBtn.Text = "Pokaż";
             this.projectBtn.UseVisualStyleBackColor = true;
             this.projectBtn.Click += new System.EventHandler(this.projectBtn_Click);
             // 
@@ -105,9 +109,9 @@ namespace GitApi
             // deleteBtn
             // 
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.deleteBtn.Location = new System.Drawing.Point(157, 360);
+            this.deleteBtn.Location = new System.Drawing.Point(118, 360);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(143, 43);
+            this.deleteBtn.Size = new System.Drawing.Size(110, 43);
             this.deleteBtn.TabIndex = 9;
             this.deleteBtn.Text = "Usuń";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -121,11 +125,25 @@ namespace GitApi
             this.listBox.Size = new System.Drawing.Size(288, 229);
             this.listBox.TabIndex = 10;
             // 
+            // numPage
+            // 
+            this.numPage.Location = new System.Drawing.Point(234, 360);
+            this.numPage.Name = "numPage";
+            this.numPage.Size = new System.Drawing.Size(47, 20);
+            this.numPage.TabIndex = 11;
+            this.numPage.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPage.ValueChanged += new System.EventHandler(this.numPage_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 415);
+            this.Controls.Add(this.numPage);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.button1);
@@ -137,6 +155,7 @@ namespace GitApi
             this.Controls.Add(this.idBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +172,7 @@ namespace GitApi
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.CheckedListBox listBox;
+        private System.Windows.Forms.NumericUpDown numPage;
     }
 }
 

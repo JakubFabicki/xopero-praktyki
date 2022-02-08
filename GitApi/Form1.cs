@@ -26,14 +26,14 @@ namespace GitApi
             InitializeComponent();
         }
         
-        private void connect(string id, string token)
+        private void connect(string id, string token, int page = 1)
         {
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
                 this.token = token;
                 this.id = id;
-                var response = client.GetAsync($"https://gitlab.com/api/v4/users/{id}/projects").Result;
+                var response = client.GetAsync($"https://gitlab.com/api/v4/users/{id}/projects?per_page=20&page={page.ToString()}").Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -64,21 +64,20 @@ namespace GitApi
         {
             JSON jsonObj;
             jsons = JsonSerializer.Deserialize<List<JSON>>(json);
-            
-            for (int i = 0; i < listBox.Items.Count; i++)
-                listBox.Items.Remove(listBox.Items[i]);
+
+            if (listBox.Items.Count > 0)
+                listBox.Items.Clear()
 
             for(int i = 0; i < jsons.Count; i++)
             {
                 jsonObj = jsons[i];
                 listBox.Items.Add(jsonObj.name, false);
-                Console.WriteLine(jsonObj.name);
             }
         }
 
         private void projectBtn_Click(object sender, EventArgs e)
         {
-            connect(idBox.Text, tokenBox.Text);
+            connect(idBox.Text, tokenBox.Text, (int)numPage.Value);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,6 +95,26 @@ namespace GitApi
                     MessageBox.Show(jsons[i].id.ToString());
                     delete(jsons[i].id.ToString());
                 }
+            }
+        }
+
+        private void numPage_ValueChanged(object sender, EventArgs e)
+        {
+            connect(idBox.Text, tokenBox.Text, (int)numPage.Value);
+        }
+
+        private void createRepo()
+        {
+            for(int i = 0; i < 20; i++)
+                {
+                    var values = new List<KeyValuePair<string, string>>();
+                    values.Add(new KeyValuePair<string, string>("name", "redsadas" + i.ToString()));
+                    var content = new FormUrlEncodedContent(values);
+                    var responsePost = client.PostAsync($"https://gitlab.com/api/v4/projects/", content).Result;
+                    if (responsePost.IsSuccessStatusCode)
+                        Console.WriteLine("działa "+responsePost.StatusCode);
+                    else
+                        Console.WriteLine("działa nie " + responsePost.StatusCode);
             }
         }
     }
