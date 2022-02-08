@@ -66,7 +66,7 @@ namespace GitApi
             jsons = JsonSerializer.Deserialize<List<JSON>>(json);
 
             if (listBox.Items.Count > 0)
-                listBox.Items.Clear()
+                listBox.Items.Clear();
 
             for(int i = 0; i < jsons.Count; i++)
             {
