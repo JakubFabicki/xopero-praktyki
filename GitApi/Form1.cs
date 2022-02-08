@@ -11,6 +11,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.IO;
 
 namespace GitApi
 {
@@ -27,17 +28,28 @@ namespace GitApi
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", "glpat-i_zjWsubaxnfdLWzxdGH");
-                var response = client.GetAsync("https://gitlab.com/api/v4/projects/?simple=yes&private=true&per_page=1000&page=1").Result;
+                //var response = client.GetAsync("https://gitlab.com/api/v4/users/10825276/projects").Result;
+                var response = client.GetAsync("https://gitlab.com/api/v4/users/10825276/projects").Result;
+
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
-
                     // by calling .Result you are synchronously reading the result
                     string responseString = responseContent.ReadAsStringAsync().Result;
 
-                    Console.WriteLine(responseString);
+                    deserializeJSON(responseString);
+                    //Console.WriteLine(responseString);
                 }
             }
         }
+
+        private void deserializeJSON(string json)
+        {
+            JSON elevadoresModel;
+            var elevadoresModels = JsonSerializer.Deserialize<List<JSON>>(json);
+            elevadoresModel = elevadoresModels.First();
+            Console.WriteLine(elevadoresModel.@namespace.name);
+
+        } 
     }
 }
