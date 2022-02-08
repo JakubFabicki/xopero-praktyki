@@ -33,10 +33,11 @@ namespace GitApi
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tokenBox = new System.Windows.Forms.TextBox();
-            this.listBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.projectBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.listBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // idBox
@@ -71,15 +72,6 @@ namespace GitApi
             this.tokenBox.Size = new System.Drawing.Size(254, 20);
             this.tokenBox.TabIndex = 3;
             // 
-            // listBox
-            // 
-            this.listBox.Location = new System.Drawing.Point(12, 114);
-            this.listBox.Multiline = true;
-            this.listBox.Name = "listBox";
-            this.listBox.ReadOnly = true;
-            this.listBox.Size = new System.Drawing.Size(288, 240);
-            this.listBox.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -94,7 +86,7 @@ namespace GitApi
             this.projectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.projectBtn.Location = new System.Drawing.Point(12, 360);
             this.projectBtn.Name = "projectBtn";
-            this.projectBtn.Size = new System.Drawing.Size(288, 43);
+            this.projectBtn.Size = new System.Drawing.Size(139, 43);
             this.projectBtn.TabIndex = 7;
             this.projectBtn.Text = "Pokaż projekty";
             this.projectBtn.UseVisualStyleBackColor = true;
@@ -110,15 +102,35 @@ namespace GitApi
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.deleteBtn.Location = new System.Drawing.Point(157, 360);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(143, 43);
+            this.deleteBtn.TabIndex = 9;
+            this.deleteBtn.Text = "Usuń";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // listBox
+            // 
+            this.listBox.FormattingEnabled = true;
+            this.listBox.Location = new System.Drawing.Point(12, 114);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(288, 229);
+            this.listBox.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 415);
+            this.Controls.Add(this.listBox);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.projectBtn);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tokenBox);
             this.Controls.Add(this.label1);
@@ -136,10 +148,11 @@ namespace GitApi
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tokenBox;
-        private System.Windows.Forms.TextBox listBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button projectBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.CheckedListBox listBox;
     }
 }
 
