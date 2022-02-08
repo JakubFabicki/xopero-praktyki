@@ -20,16 +20,14 @@ namespace GitApi
         public Form1()
         {
             InitializeComponent();
-            connect();
         }
         
-        private void connect()
+        private void connect(string id, string token)
         {
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", "glpat-i_zjWsubaxnfdLWzxdGH");
-                //var response = client.GetAsync("https://gitlab.com/api/v4/users/10825276/projects").Result;
-                var response = client.GetAsync("https://gitlab.com/api/v4/users/10825276/projects").Result;
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                var response = client.GetAsync($"https://gitlab.com/api/v4/users/{id}/projects").Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -38,18 +36,33 @@ namespace GitApi
                     string responseString = responseContent.ReadAsStringAsync().Result;
 
                     deserializeJSON(responseString);
-                    //Console.WriteLine(responseString);
                 }
+                else
+                    MessageBox.Show("Wprowadź poprawne dane");
             }
         }
 
         private void deserializeJSON(string json)
         {
-            JSON elevadoresModel;
-            var elevadoresModels = JsonSerializer.Deserialize<List<JSON>>(json);
-            elevadoresModel = elevadoresModels.First();
-            Console.WriteLine(elevadoresModel.@namespace.name);
+            JSON jsonObj;
+            var jsons = JsonSerializer.Deserialize<List<JSON>>(json);
+            listBox.Text = null;
+            for(int i = 0; i < jsons.Count; i++)
+            {
+                jsonObj = jsons[i];
+                listBox.Text += jsonObj.name + "\r\n";
+                Console.WriteLine(jsonObj.name);
+            }
+        }
 
-        } 
+        private void projectBtn_Click(object sender, EventArgs e)
+        {
+            connect(idBox.Text, tokenBox.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://gitlab.com/-/profile/personal_access_tokens");
+        }
     }
 }
