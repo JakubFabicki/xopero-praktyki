@@ -11,7 +11,6 @@ using System.Net;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.IO;
 
 namespace GitApi
 {
@@ -32,7 +31,6 @@ namespace GitApi
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
-                    // by calling .Result you are synchronously reading the result
                     string responseString = responseContent.ReadAsStringAsync().Result;
 
                     deserializeJSON(responseString);
@@ -47,6 +45,7 @@ namespace GitApi
             JSON jsonObj;
             var jsons = JsonSerializer.Deserialize<List<JSON>>(json);
             listBox.Text = null;
+
             for(int i = 0; i < jsons.Count; i++)
             {
                 jsonObj = jsons[i];
