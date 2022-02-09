@@ -26,4 +26,3 @@ C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitA
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csproj.CopyComplete
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.exe
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.pdb
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csprojAssemblyReference.cache

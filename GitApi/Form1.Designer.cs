@@ -112,6 +112,16 @@ namespace GitApi
             // numPage
             // 
             this.numPage.Location = new System.Drawing.Point(253, 90);
+            this.numPage.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numPage.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numPage.Name = "numPage";
             this.numPage.Size = new System.Drawing.Size(47, 20);
             this.numPage.TabIndex = 11;
