@@ -18,18 +18,36 @@ namespace GitApi
     {
         //glpat-X539X-MgHnwgM_FDiyes
         List<JSON> jsons;
-        List<UserID> jsonsID;
         string token, id;
         HttpClient client;
 
         public Form1()
         {
             InitializeComponent();
-            getUserID();
+            //createRepo();
         }
         
+        private void getUserID()
+        {
+            using (client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", tokenBox.Text);
+                var response = client.GetAsync($"https://gitlab.com/api/v4/user").Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = response.Content;
+                    string responseString = responseContent.ReadAsStringAsync().Result;
+                    deserializeJSONID(responseString);
+                }
+                else
+                    MessageBox.Show("Wprowadź poprawne dane");
+            }
+        }
+
         private void getProject(string token, int page = 1)
         {
+            getUserID();
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);   
@@ -47,27 +65,9 @@ namespace GitApi
             }
         }
 
-        private void getUserID()
-        {
-            using (client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", "glpat-X539X-MgHnwgM_FDiyes");
-                var response = client.GetAsync($"https://gitlab.com/api/v4/user").Result;
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseContent = response.Content;
-                    string responseString = responseContent.ReadAsStringAsync().Result;
-                    deserializeJSONID(responseString);
-                    Console.WriteLine(responseString);
-                }
-                else
-                    MessageBox.Show("Wprowadź poprawne dane");
-            }
-        }
-
         private void delete(string id)
         {
+            getUserID();
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
@@ -77,6 +77,26 @@ namespace GitApi
                     Console.WriteLine("Pomyślnie usunięto projekt");
                 else
                     Console.WriteLine("Projekt nie został usunięty");
+            }
+        }
+
+        private void deleteAll()
+        {
+            DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz skasować wszystko?", "Potwierdzenie", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (jsons == null)
+                    getProject(token);
+
+                while (jsons.Count > 0)
+                {
+                    for (int i = jsons.Count - 1; i == 0; i--)
+                    {
+                        delete(jsons[i].id.ToString());
+                        listBox.Items.Remove(listBox.Items[i]);
+                    }
+                    getProject(token);
+                }
             }
         }
 
@@ -99,7 +119,7 @@ namespace GitApi
         {
             UserID jsonObj = JsonSerializer.Deserialize<UserID>(json);
 
-            nameLabel.Text = (jsonObj.name);
+            nameLabel.Text = ("Witaj " + jsonObj.name);
             id = jsonObj.id.ToString();
         }
 
@@ -131,18 +151,27 @@ namespace GitApi
             getProject(tokenBox.Text, (int)numPage.Value);
         }
 
+        private void deleteAllBtn_Click(object sender, EventArgs e)
+        {
+            deleteAll();
+        }
+
         private void createRepo()
         {
-            for(int i = 0; i < 20; i++)
+            using (client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", "glpat-X539X-MgHnwgM_FDiyes");
+                for (int i = 0; i < 30; i++)
                 {
                     var values = new List<KeyValuePair<string, string>>();
-                    values.Add(new KeyValuePair<string, string>("name", "redsadas" + i.ToString()));
+                    values.Add(new KeyValuePair<string, string>("name", "repos" + i.ToString()));
                     var content = new FormUrlEncodedContent(values);
                     var responsePost = client.PostAsync($"https://gitlab.com/api/v4/projects/", content).Result;
                     if (responsePost.IsSuccessStatusCode)
                         Console.WriteLine("działa "+responsePost.StatusCode);
                     else
                         Console.WriteLine("działa nie " + responsePost.StatusCode);
+                }
             }
         }
     }
