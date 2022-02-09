@@ -94,5 +94,16 @@ namespace BigFileReader
                 textBox1.Text = tekst;
             }
         }
+
+        private void search()
+        {
+            int tak = tekst.IndexOf("a", 0, tekst.Length);
+            Console.WriteLine(tak.ToString());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            search();
+        }
     }
 }
