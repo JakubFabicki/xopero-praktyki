@@ -1,13 +1,6 @@
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csprojAssemblyReference.cache
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.Form1.resources
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.Properties.Resources.resources
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csproj.GenerateResource.cache
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csproj.CoreCompileInputs.cache
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\GitApi.exe.config
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\GitApi.exe
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\GitApi.pdb
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.exe
-C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.pdb
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\System.Buffers.dll
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\System.Memory.dll
@@ -26,4 +19,10 @@ C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\Syst
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\System.Text.Json.xml
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\bin\Debug\System.ValueTuple.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csproj.CoreCompileInputs.cache
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.csproj.CopyComplete
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\GitApi\obj\Debug\GitApi.pdb

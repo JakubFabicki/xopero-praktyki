@@ -57,7 +57,6 @@ namespace GitApi
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.Size = new System.Drawing.Size(254, 20);
             this.tokenBox.TabIndex = 3;
-            this.tokenBox.Text = "glpat-X539X-MgHnwgM_FDiyes";
             // 
             // label3
             // 
@@ -73,7 +72,7 @@ namespace GitApi
             this.projectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.projectBtn.Location = new System.Drawing.Point(12, 321);
             this.projectBtn.Name = "projectBtn";
-            this.projectBtn.Size = new System.Drawing.Size(100, 43);
+            this.projectBtn.Size = new System.Drawing.Size(139, 43);
             this.projectBtn.TabIndex = 7;
             this.projectBtn.Text = "Pokaż";
             this.projectBtn.UseVisualStyleBackColor = true;
@@ -92,9 +91,9 @@ namespace GitApi
             // deleteBtn
             // 
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.deleteBtn.Location = new System.Drawing.Point(118, 321);
+            this.deleteBtn.Location = new System.Drawing.Point(157, 321);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(110, 43);
+            this.deleteBtn.Size = new System.Drawing.Size(143, 43);
             this.deleteBtn.TabIndex = 9;
             this.deleteBtn.Text = "Usuń";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -136,7 +135,7 @@ namespace GitApi
             this.deleteAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.deleteAllBtn.Location = new System.Drawing.Point(12, 370);
             this.deleteAllBtn.Name = "deleteAllBtn";
-            this.deleteAllBtn.Size = new System.Drawing.Size(216, 40);
+            this.deleteAllBtn.Size = new System.Drawing.Size(288, 40);
             this.deleteAllBtn.TabIndex = 13;
             this.deleteAllBtn.Text = "Usuń wszystko";
             this.deleteAllBtn.UseVisualStyleBackColor = true;
