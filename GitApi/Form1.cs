@@ -139,7 +139,6 @@ namespace GitApi
                 if (listBox.GetItemChecked(i))
                 {
                     listBox.Items.Remove(listBox.Items[i]);
-                    MessageBox.Show(jsons[i].id.ToString());
                     delete(jsons[i].id.ToString());
                 }
             }
@@ -153,6 +152,14 @@ namespace GitApi
         private void deleteAllBtn_Click(object sender, EventArgs e)
         {
             deleteAll();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < listBox.Items.Count; i++)
+            {
+                listBox.SetItemChecked(i, true);
+            }
         }
 
         private void createRepo()

@@ -39,6 +39,7 @@ namespace GitApi
             this.numPage = new System.Windows.Forms.NumericUpDown();
             this.nameLabel = new System.Windows.Forms.Label();
             this.deleteAllBtn = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@ namespace GitApi
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 100);
+            this.label3.Location = new System.Drawing.Point(34, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 6;
@@ -141,11 +142,22 @@ namespace GitApi
             this.deleteAllBtn.UseVisualStyleBackColor = true;
             this.deleteAllBtn.Click += new System.EventHandler(this.deleteAllBtn_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(15, 99);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 415);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.deleteAllBtn);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.numPage);
@@ -175,6 +187,7 @@ namespace GitApi
         private System.Windows.Forms.NumericUpDown numPage;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button deleteAllBtn;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
