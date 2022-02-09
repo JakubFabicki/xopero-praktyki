@@ -29,8 +29,6 @@ namespace GitApi
         /// </summary>
         private void InitializeComponent()
         {
-            this.idBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tokenBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,25 +37,9 @@ namespace GitApi
             this.deleteBtn = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.CheckedListBox();
             this.numPage = new System.Windows.Forms.NumericUpDown();
+            this.nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // idBox
-            // 
-            this.idBox.Location = new System.Drawing.Point(12, 25);
-            this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(288, 20);
-            this.idBox.TabIndex = 0;
-            this.idBox.Text = "10825276";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID";
             // 
             // label2
             // 
@@ -138,11 +120,22 @@ namespace GitApi
             0});
             this.numPage.ValueChanged += new System.EventHandler(this.numPage_ValueChanged);
             // 
+            // nameLabel
+            // 
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nameLabel.Location = new System.Drawing.Point(12, 9);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(288, 34);
+            this.nameLabel.TabIndex = 12;
+            this.nameLabel.Text = "Witaj użytkowniku";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 415);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.numPage);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.deleteBtn);
@@ -151,8 +144,6 @@ namespace GitApi
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tokenBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.idBox);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
@@ -162,9 +153,6 @@ namespace GitApi
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox idBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tokenBox;
         private System.Windows.Forms.Label label3;
@@ -173,6 +161,7 @@ namespace GitApi
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.CheckedListBox listBox;
         private System.Windows.Forms.NumericUpDown numPage;
+        private System.Windows.Forms.Label nameLabel;
     }
 }
 

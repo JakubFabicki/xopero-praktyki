@@ -18,28 +18,48 @@ namespace GitApi
     {
         //glpat-X539X-MgHnwgM_FDiyes
         List<JSON> jsons;
+        List<UserID> jsonsID;
         string token, id;
         HttpClient client;
 
         public Form1()
         {
             InitializeComponent();
+            getUserID();
         }
         
-        private void connect(string id, string token, int page = 1)
+        private void getProject(string token, int page = 1)
         {
             using (client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);   
                 this.token = token;
-                this.id = id;
                 var response = client.GetAsync($"https://gitlab.com/api/v4/users/{id}/projects?per_page=20&page={page.ToString()}").Result;
 
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
                     string responseString = responseContent.ReadAsStringAsync().Result;
-                    deserializeJSON(responseString);
+                    deserializeJSONProject(responseString);
+                }
+                else
+                    MessageBox.Show("Wprowadź poprawne dane");
+            }
+        }
+
+        private void getUserID()
+        {
+            using (client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", "glpat-X539X-MgHnwgM_FDiyes");
+                var response = client.GetAsync($"https://gitlab.com/api/v4/user").Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = response.Content;
+                    string responseString = responseContent.ReadAsStringAsync().Result;
+                    deserializeJSONID(responseString);
+                    Console.WriteLine(responseString);
                 }
                 else
                     MessageBox.Show("Wprowadź poprawne dane");
@@ -60,7 +80,7 @@ namespace GitApi
             }
         }
 
-        private void deserializeJSON(string json)
+        private void deserializeJSONProject(string json)
         {
             JSON jsonObj;
             jsons = JsonSerializer.Deserialize<List<JSON>>(json);
@@ -75,9 +95,17 @@ namespace GitApi
             }
         }
 
+        private void deserializeJSONID(string json)
+        {
+            UserID jsonObj = JsonSerializer.Deserialize<UserID>(json);
+
+            nameLabel.Text = (jsonObj.name);
+            id = jsonObj.id.ToString();
+        }
+
         private void projectBtn_Click(object sender, EventArgs e)
         {
-            connect(idBox.Text, tokenBox.Text, (int)numPage.Value);
+            getProject(tokenBox.Text, (int)numPage.Value);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,7 +128,7 @@ namespace GitApi
 
         private void numPage_ValueChanged(object sender, EventArgs e)
         {
-            connect(idBox.Text, tokenBox.Text, (int)numPage.Value);
+            getProject(tokenBox.Text, (int)numPage.Value);
         }
 
         private void createRepo()
