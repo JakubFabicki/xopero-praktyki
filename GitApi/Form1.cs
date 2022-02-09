@@ -157,7 +157,7 @@ namespace GitApi
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (checkBox1.Checked
                 for (int i = 0; i < listBox.Items.Count; i++)
                     listBox.SetItemChecked(i, true);
             else

@@ -1,0 +1,10 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\bin\Debug\BigFileReader.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\bin\Debug\BigFileReader.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\bin\Debug\BigFileReader.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\BigFileReader\obj\Debug\BigFileReader.pdb
