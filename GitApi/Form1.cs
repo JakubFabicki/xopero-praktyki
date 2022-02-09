@@ -16,7 +16,6 @@ namespace GitApi
 {
     public partial class Form1 : Form
     {
-        //glpat-X539X-MgHnwgM_FDiyes
         List<JSON> jsons;
         string token, id;
         HttpClient client;
