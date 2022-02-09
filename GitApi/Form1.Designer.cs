@@ -102,6 +102,7 @@ namespace GitApi
             // 
             // listBox
             // 
+            this.listBox.CheckOnClick = true;
             this.listBox.FormattingEnabled = true;
             this.listBox.Location = new System.Drawing.Point(12, 116);
             this.listBox.Name = "listBox";
