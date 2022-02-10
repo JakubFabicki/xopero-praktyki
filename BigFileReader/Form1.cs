@@ -64,9 +64,26 @@ namespace BigFileReader
             {
                 string searchText = searchBox.Text;
 
-                if (searchIndex + searchText.Length > tekst.Length)
-                    searchIndex = 0;
-                
+                if (!searchChbox.Checked)
+                {
+                    if (searchIndex + searchText.Length >= tekst.Length)
+                        searchIndex = 0;
+                }
+                else
+                {
+                    if (searchIndex + searchText.Length >= tekst.Length)
+                    {
+                        length += readLenght;
+                        Thread t = new Thread(new ThreadStart(readBigFile));
+                        t.Start();
+                        numericUpDown1.Value++;
+                        t.Join();
+                        textBox1.Text = tekst;
+                        searchIndex = 0;
+                        Console.WriteLine("tak");
+                    }
+                }
+
                 int searchIndexReturn = tekst.IndexOf(searchText, searchIndex, tekst.Length - searchIndex);
 
                 if (searchIndexReturn != -1)
@@ -120,6 +137,7 @@ namespace BigFileReader
 
             numericUpDown1.Value = 1;
             length = 0;
+            error = false;
 
             Thread t = new Thread(new ThreadStart(readBigFile));
             t.Start();
@@ -165,11 +183,11 @@ namespace BigFileReader
             string path = @"c:\temp\MyTests.txt";
             using (FileStream fs = File.Create(path))
             {
-                for (int i = 0; i < 100000000; i++)
+                for (int i = 0; i < 99999997; i++)
                     bigFile[i] += (byte)'a';
-                for (int i = 100000000; i < 200000000; i++)
+                for (int i = 99999997; i < 199999997; i++)
                     bigFile[i] += (byte)'b';
-                for (int i = 200000000; i < 300000000; i++)
+                for (int i = 199999997; i < 299999997; i++)
                     bigFile[i] += (byte)'c';
                 for (int i = 300000000; i < 400000000; i++)
                     bigFile[i] += (byte)'d';

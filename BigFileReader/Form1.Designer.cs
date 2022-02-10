@@ -38,6 +38,7 @@ namespace BigFileReader
             this.button4 = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.searchChbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -98,11 +99,18 @@ namespace BigFileReader
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.searchChbox);
             this.groupBox1.Controls.Add(this.searchBox);
             this.groupBox1.Controls.Add(this.button4);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // searchChbox
+            // 
+            resources.ApplyResources(this.searchChbox, "searchChbox");
+            this.searchChbox.Name = "searchChbox";
+            this.searchChbox.UseVisualStyleBackColor = true;
             // 
             // BigFile
             // 
@@ -133,6 +141,7 @@ namespace BigFileReader
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox searchChbox;
     }
 }
 
