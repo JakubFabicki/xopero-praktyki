@@ -118,6 +118,9 @@ namespace BigFileReader
             openFileDialog1.Title = "Wybierz plik, który chcesz przeglądać";
             fullPath = openFileDialog1.FileName;
 
+            numericUpDown1.Value = 1;
+            length = 0;
+
             Thread t = new Thread(new ThreadStart(readBigFile));
             t.Start();
             t.Join();
