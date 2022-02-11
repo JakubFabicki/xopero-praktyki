@@ -40,7 +40,13 @@ namespace GitApi
             this.nameLabel = new System.Windows.Forms.Label();
             this.deleteAllBtn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.addRepoBtn = new System.Windows.Forms.Button();
+            this.genRepoName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.genRepoNum = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genRepoNum)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -163,11 +169,74 @@ namespace GitApi
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // addRepoBtn
+            // 
+            this.addRepoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addRepoBtn.Location = new System.Drawing.Point(306, 321);
+            this.addRepoBtn.Name = "addRepoBtn";
+            this.addRepoBtn.Size = new System.Drawing.Size(143, 43);
+            this.addRepoBtn.TabIndex = 15;
+            this.addRepoBtn.Text = "dodaj";
+            this.addRepoBtn.UseVisualStyleBackColor = true;
+            this.addRepoBtn.Click += new System.EventHandler(this.addRepoBtn_Click);
+            // 
+            // genRepoName
+            // 
+            this.genRepoName.Location = new System.Drawing.Point(306, 256);
+            this.genRepoName.Name = "genRepoName";
+            this.genRepoName.Size = new System.Drawing.Size(144, 20);
+            this.genRepoName.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(306, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Nazwa";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(306, 279);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Ilość";
+            // 
+            // genRepoNum
+            // 
+            this.genRepoNum.Location = new System.Drawing.Point(309, 295);
+            this.genRepoNum.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.genRepoNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.genRepoNum.Name = "genRepoNum";
+            this.genRepoNum.Size = new System.Drawing.Size(141, 20);
+            this.genRepoNum.TabIndex = 20;
+            this.genRepoNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 415);
+            this.ClientSize = new System.Drawing.Size(462, 415);
+            this.Controls.Add(this.genRepoNum);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.genRepoName);
+            this.Controls.Add(this.addRepoBtn);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.deleteAllBtn);
             this.Controls.Add(this.nameLabel);
@@ -182,6 +251,7 @@ namespace GitApi
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genRepoNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +269,11 @@ namespace GitApi
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button deleteAllBtn;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button addRepoBtn;
+        private System.Windows.Forms.TextBox genRepoName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown genRepoNum;
     }
 }
 

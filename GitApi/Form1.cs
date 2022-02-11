@@ -157,7 +157,7 @@ namespace GitApi
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked
+            if (checkBox1.Checked)
                 for (int i = 0; i < listBox.Items.Count; i++)
                     listBox.SetItemChecked(i, true);
             else
@@ -165,15 +165,22 @@ namespace GitApi
                     listBox.SetItemChecked(i, false);
         }
 
-        private void createRepo()
+        private void addRepoBtn_Click(object sender, EventArgs e)
+        {
+            createRepo(genRepoName.Text, (int) genRepoNum.Value);
+            getProject(tokenBox.Text, (int)numPage.Value);
+        }
+
+        private void createRepo(string name, int length)
         {
             using (client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", "glpat-X539X-MgHnwgM_FDiyes");
-                for (int i = 0; i < 30; i++)
+                token = tokenBox.Text;
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                for (int i = 0; i < length; i++)
                 {
                     var values = new List<KeyValuePair<string, string>>();
-                    values.Add(new KeyValuePair<string, string>("name", "repos" + i.ToString()));
+                    values.Add(new KeyValuePair<string, string>("name", name + i.ToString()));
                     var content = new FormUrlEncodedContent(values);
                     var responsePost = client.PostAsync($"https://gitlab.com/api/v4/projects/", content).Result;
                     if (responsePost.IsSuccessStatusCode)
