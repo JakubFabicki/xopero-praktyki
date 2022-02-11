@@ -45,6 +45,8 @@ namespace GitApi
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.genRepoNum = new System.Windows.Forms.NumericUpDown();
+            this.bar = new System.Windows.Forms.ProgressBar();
+            this.barLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genRepoNum)).BeginInit();
             this.SuspendLayout();
@@ -227,11 +229,34 @@ namespace GitApi
             0,
             0});
             // 
+            // bar
+            // 
+            this.bar.Location = new System.Drawing.Point(309, 388);
+            this.bar.Maximum = 10;
+            this.bar.Name = "bar";
+            this.bar.Size = new System.Drawing.Size(141, 22);
+            this.bar.Step = 1;
+            this.bar.TabIndex = 21;
+            this.bar.Value = 1;
+            this.bar.Visible = false;
+            // 
+            // barLabel
+            // 
+            this.barLabel.AutoSize = true;
+            this.barLabel.Location = new System.Drawing.Point(306, 372);
+            this.barLabel.Name = "barLabel";
+            this.barLabel.Size = new System.Drawing.Size(35, 13);
+            this.barLabel.TabIndex = 22;
+            this.barLabel.Text = "label5";
+            this.barLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 415);
+            this.Controls.Add(this.barLabel);
+            this.Controls.Add(this.bar);
             this.Controls.Add(this.genRepoNum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -274,6 +299,8 @@ namespace GitApi
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown genRepoNum;
+        private System.Windows.Forms.ProgressBar bar;
+        private System.Windows.Forms.Label barLabel;
     }
 }
 

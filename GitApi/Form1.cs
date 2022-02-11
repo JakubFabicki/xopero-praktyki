@@ -177,6 +177,11 @@ namespace GitApi
             {
                 token = tokenBox.Text;
                 client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                barLabel.Visible = true;
+                bar.Visible = true;
+                barLabel.Text = $"0 / {length}";
+                bar.Minimum = 0;
+                bar.Maximum = length;
                 for (int i = 0; i < length; i++)
                 {
                     var values = new List<KeyValuePair<string, string>>();
@@ -184,10 +189,20 @@ namespace GitApi
                     var content = new FormUrlEncodedContent(values);
                     var responsePost = client.PostAsync($"https://gitlab.com/api/v4/projects/", content).Result;
                     if (responsePost.IsSuccessStatusCode)
-                        Console.WriteLine("działa "+responsePost.StatusCode);
+                    {
+                        Console.WriteLine("działa "+ i +" "+responsePost.StatusCode);
+                        bar.Value = i+1;
+                        barLabel.Text = $"{bar.Value - 1} / {bar.Maximum}";
+                    }
                     else
+                    {
                         Console.WriteLine("działa nie " + responsePost.StatusCode);
+                        bar.Maximum--;
+                    }
                 }
+                barLabel.Visible = false;
+                bar.Visible = false;
+                bar.Value = 0;
             }
         }
     }
