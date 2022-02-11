@@ -1,0 +1,9 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\bin\Debug\Algorytmy.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\bin\Debug\Algorytmy.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\bin\Debug\Algorytmy.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.pdb

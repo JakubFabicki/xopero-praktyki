@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitApi", "GitApi\GitApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigFileReader", "BigFileReader\BigFileReader.csproj", "{6BC9B6DE-49CB-4143-827A-79AB81687A19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorytmy", "Algorytmy\Algorytmy.csproj", "{18B90012-36FC-4C45-A44E-C2C5BFCAC0E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{6BC9B6DE-49CB-4143-827A-79AB81687A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC9B6DE-49CB-4143-827A-79AB81687A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC9B6DE-49CB-4143-827A-79AB81687A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B90012-36FC-4C45-A44E-C2C5BFCAC0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B90012-36FC-4C45-A44E-C2C5BFCAC0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B90012-36FC-4C45-A44E-C2C5BFCAC0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B90012-36FC-4C45-A44E-C2C5BFCAC0E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
