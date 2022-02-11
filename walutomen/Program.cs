@@ -28,7 +28,7 @@ namespace walutomen
             var discord = new DiscordClient(
             new DiscordConfiguration()
             {
-                Token = "OTQxMjc0ODkwOTE5NjEyNDI3.YgTkjg.TOb08gCmXyolDuNh1EN7qQeT2gs",
+                Token = "OTQxMjc0ODkwOTE5NjEyNDI3.Y//xddd//gTkjg.5Ib62h0SNVFDlqugYGeC8nr2urw",
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.AllUnprivileged,
             });
@@ -57,7 +57,7 @@ namespace walutomen
             JsonReader jsonReader = new JsonReader();
             database DB = new database();
             DB.CreateDatabaseAndTable();
-            await ctx.RespondAsync($"Aktualny kurs { code } to: " + jsonReader.json(code));
+            await ctx.RespondAsync($"Aktualny kurs { code.ToUpper() } to: " + jsonReader.json(code));
             if (DB.SelectData(ctx.User.Id, code) == 0)
                 DB.AddData(ctx.User.Id, code);
             else
@@ -73,7 +73,7 @@ namespace walutomen
             database DB = new database();
             DB.CreateDatabaseAndTable();
             int count = DB.SelectStats(ctx.User.Id, code);
-            await ctx.RespondAsync($"Sprawdzałeś walutę { code } {count} razy");
+            await ctx.RespondAsync($"Sprawdzałeś walutę { code.ToUpper() } {count} razy");
         }
     }
 

@@ -5435,11 +5435,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\walutomen\\walutomen.csproj",
+      "projectUniqueName": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\walutomen\\walutomen.csproj",
       "projectName": "walutomen",
-      "projectPath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\walutomen\\walutomen.csproj",
+      "projectPath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\walutomen\\walutomen.csproj",
       "packagesPath": "C:\\Users\\xopero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\walutomen\\obj\\",
+      "outputPath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\walutomen\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xopero\\AppData\\Roaming\\NuGet\\NuGet.Config",

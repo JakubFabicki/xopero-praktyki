@@ -41,7 +41,7 @@ namespace walutomen
             cmd = new SQLiteCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "insert into statistic(ID ,Score, Code) values (" + id + ", " + "1" + ",'" + code + "')";
+            cmd.CommandText = "insert into statistic(ID ,Score, Code) values (" + id + ", " + "1" + ", UPPER('" + code + "'))";
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -51,7 +51,7 @@ namespace walutomen
             cmd = new SQLiteCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "update statistic set Score = Score + 1 where id = " + id + " and code = '" + code + "'";
+            cmd.CommandText = "update statistic set Score = Score + 1 where id = " + id + " and code = UPPER('" + code + "')";
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -59,7 +59,7 @@ namespace walutomen
         public int SelectData(ulong id, string code)
         {
             int counter = 0;
-            cmd = new SQLiteCommand("Select * From statistic where ID = " + id + " and Code = '" + code + "'", con);
+            cmd = new SQLiteCommand("Select * From statistic where ID = " + id + " and Code = UPPER('" + code + "')", con);
             con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -76,7 +76,7 @@ namespace walutomen
         {
 
             int score = 0;
-            cmd = new SQLiteCommand("Select Score From statistic WHERE ID = " + id + " AND Code = '" + code + "'", con);
+            cmd = new SQLiteCommand("Select Score From statistic WHERE ID = " + id + " AND Code = UPPER('" + code + "')", con);
             con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())

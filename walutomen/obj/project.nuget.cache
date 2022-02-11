@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CzVWSON1Mop7JdHOdBfKfynEt09UURN25eOuM4/EQaEqNjRhgFBvweRBJF8V7PThXNpQtvnI4mFPgzQUcFZHBA==",
+  "dgSpecHash": "OXppfbnmw85lvc2Zztv9qkc7cVeEdWgsp2hu0pQGYgwFiBvVz9L5o1qamXkXMwu7U48fKt9+XpitPPIZUMi1gA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\walutomen\\walutomen.csproj",
+  "projectFilePath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\walutomen\\walutomen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xopero\\.nuget\\packages\\concurrenthashset\\1.1.0\\concurrenthashset.1.1.0.nupkg.sha512",
     "C:\\Users\\xopero\\.nuget\\packages\\dsharpplus\\4.1.0\\dsharpplus.4.1.0.nupkg.sha512",
