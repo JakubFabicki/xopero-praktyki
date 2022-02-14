@@ -121,7 +121,7 @@ namespace Algorytmy
         private void save()
         {
             Base64 b64 = new Base64();
-            using (FileStream fs = File.Create(@"c:\temp\score.txt"))
+            using (FileStream fs = File.Create(Path.GetDirectoryName(Application.ExecutablePath) + "\\score.txt"))
             {
                 byte[] info = new UTF8Encoding(true).GetBytes(b64.encodeBase64(failBox.Text));
                 fs.Write(info, 0, info.Length);
@@ -184,7 +184,7 @@ namespace Algorytmy
         {
             string[] loadPoints = new string[2];
             Base64 b64 = new Base64();
-            using (StreamReader sr = new StreamReader(@"c:\temp\score.txt"))
+            using (StreamReader sr = new StreamReader(Path.GetDirectoryName(Application.ExecutablePath) + "\\score.txt"))
                 for (int i = 0; i < 2; i++)
                     loadPoints[i] = sr.ReadLine();
             rightBox.Text = b64.decodeBase64(loadPoints[0]);
