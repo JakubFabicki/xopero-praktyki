@@ -191,13 +191,17 @@ namespace GitApi
                     if (responsePost.IsSuccessStatusCode)
                     {
                         Console.WriteLine("działa "+ i +" "+responsePost.StatusCode);
-                        bar.Value = i+1;
-                        barLabel.Text = $"{bar.Value - 1} / {bar.Maximum}";
+                        if(bar.Value < bar.Maximum)
+                            bar.Value++;
+                        barLabel.Text = $"{bar.Value} / {bar.Maximum}";
                     }
                     else
                     {
                         Console.WriteLine("działa nie " + responsePost.StatusCode);
                         bar.Maximum--;
+                        barLabel.Text = $"{bar.Value} / {bar.Maximum}";
+                        if (bar.Value > 0)
+                            bar.Value--;
                     }
                 }
                 barLabel.Visible = false;
