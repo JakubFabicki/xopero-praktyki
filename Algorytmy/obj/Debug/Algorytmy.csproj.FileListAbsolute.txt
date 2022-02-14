@@ -7,3 +7,4 @@ C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\A
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.csproj.CoreCompileInputs.cache
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.exe
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Algorytmy\obj\Debug\Algorytmy.Form1.resources
