@@ -58,7 +58,6 @@ namespace githubIssues
             this.ownerBox.Name = "ownerBox";
             this.ownerBox.Size = new System.Drawing.Size(161, 20);
             this.ownerBox.TabIndex = 1;
-            this.ownerBox.Text = "JakubFabicki";
             // 
             // tokenBox
             // 
@@ -66,7 +65,6 @@ namespace githubIssues
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.Size = new System.Drawing.Size(286, 20);
             this.tokenBox.TabIndex = 2;
-            this.tokenBox.Text = "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";
             // 
             // repoBox
             // 
@@ -74,7 +72,6 @@ namespace githubIssues
             this.repoBox.Name = "repoBox";
             this.repoBox.Size = new System.Drawing.Size(145, 20);
             this.repoBox.TabIndex = 3;
-            this.repoBox.Text = "xopero-praktyki";
             // 
             // viewDataBtn
             // 

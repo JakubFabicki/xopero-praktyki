@@ -109,7 +109,7 @@ namespace githubIssues
 
                 for (int i = 0; i < pullRequestsClosed.Count; i++)
                     pullClosedView.Text += pullRequestsClosed[i].Title + "\r\n";
-                openPullReq = pullRequestsClosed.Count;
+                closePullReq = pullRequestsClosed.Count;
 
 
                 for (int i = 0; i < issues.Count; i++)
@@ -119,12 +119,11 @@ namespace githubIssues
                         issuesView.Text += issues[i].Title + "\r\n";
                         this.issues++;
                     }
-
                 }
 
                 for (int i = 0; i < pullRequestsOpen.Count; i++)
                     pullView.Text += pullRequestsOpen[i].Title + "\r\n";
-                closePullReq = pullRequestsClosed.Count;
+                openPullReq = pullRequestsOpen.Count;
             }
             catch(Exception e)
             {
