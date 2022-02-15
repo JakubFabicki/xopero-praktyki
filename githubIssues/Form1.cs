@@ -29,7 +29,7 @@ namespace githubIssues
         private void getRepo()
         {
             var client = new GitHubClient(new ProductHeaderValue("JakubFabicki"));
-            var tokenAuth = new Credentials("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"); // NOTE: not real token
+            var tokenAuth = new Credentials("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"); // NOTE: not real token
             client.Credentials = tokenAuth;
 
             var recently = new IssueRequest
@@ -38,7 +38,10 @@ namespace githubIssues
                 State = ItemStateFilter.All,
                 Since = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(14))
             };
+            var pullRequests = client.PullRequest.GetAllForRepository("JakubFabicki", "Xopero-praktyki").Result;
             var issues = client.Issue.GetAllForCurrent(recently).Result;
+
+            Console.WriteLine(pullRequests.Count);
             Console.WriteLine(issues.Count);
 
         }
