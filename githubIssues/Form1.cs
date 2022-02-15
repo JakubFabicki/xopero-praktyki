@@ -175,10 +175,10 @@ namespace githubIssues
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                 MySqlDataReader rdr = cmd.ExecuteReader();
+                dataGridView1.Rows.Clear();
                 while (rdr.Read())
                 {
                     dataGridView1.Rows.Add(rdr[0], rdr[1], rdr[2], rdr[3]);
-                    
                 }
 
                 rdr.Close();
