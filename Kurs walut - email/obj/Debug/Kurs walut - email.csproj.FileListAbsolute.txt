@@ -1,0 +1,29 @@
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs walut - email.csprojAssemblyReference.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs_walut___email.Form1.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs_walut___email.Properties.Resources.resources
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs walut - email.csproj.GenerateResource.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs walut - email.csproj.CoreCompileInputs.cache
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Kurs walut - email.exe.config
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Kurs walut - email.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Kurs walut - email.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs walut - email.exe
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs walut - email.pdb
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Buffers.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Memory.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.ValueTuple.dll
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Buffers.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Memory.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\bin\Debug\System.ValueTuple.xml
+C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\Kurs walut - email\obj\Debug\Kurs walut - email.csproj.CopyComplete
