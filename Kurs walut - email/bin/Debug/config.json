@@ -1,5 +1,10 @@
 {
-  "email": "gorzowmod@gmail.com",
-  "interval": 1000,
-  "key": ""
+  "senderConfig": {
+    "smtpServer": "smtp.gmail.com.",
+    "port": 587,
+    "email": "example@mail.com",
+    "key": "pass",
+    "interval": 10 //time in minute
+  },
+  "email": "example@mail.com"
 }
