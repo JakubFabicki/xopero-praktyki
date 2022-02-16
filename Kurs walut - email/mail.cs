@@ -94,6 +94,7 @@ namespace Kurs_walut___email
                         }
                     }
                 }
+                body += "Aby wyłaczyć usługę kliknij <a href=\"http://localhost:9000\">tutaj</a>";
 
                 ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(ValidateRemoteCertificate);
 
@@ -106,8 +107,9 @@ namespace Kurs_walut___email
                         Credentials = new NetworkCredential(configJson.senderConfig.email, configJson.senderConfig.key),
                         EnableSsl = true
                     };
-
-                    smtpClient.Send(configJson.senderConfig.email, configJson.email, title, body);
+                    MailMessage mail = new MailMessage(configJson.senderConfig.email, configJson.email, title, body);
+                    mail.IsBodyHtml = true;
+                    smtpClient.Send(mail);
                     Console.WriteLine("Send");
                 }
                 catch (Exception e)
