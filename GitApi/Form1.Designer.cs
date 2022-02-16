@@ -47,14 +47,30 @@ namespace GitApi
             this.genRepoNum = new System.Windows.Forms.NumericUpDown();
             this.bar = new System.Windows.Forms.ProgressBar();
             this.barLabel = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.delAllGrpBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.grpBtn = new System.Windows.Forms.Button();
+            this.grpNumPage = new System.Windows.Forms.NumericUpDown();
+            this.grpListBox = new System.Windows.Forms.CheckedListBox();
+            this.delGrpBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genRepoNum)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpNumPage)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(12, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 4;
@@ -62,7 +78,7 @@ namespace GitApi
             // 
             // tokenBox
             // 
-            this.tokenBox.Location = new System.Drawing.Point(12, 64);
+            this.tokenBox.Location = new System.Drawing.Point(12, 61);
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.Size = new System.Drawing.Size(254, 20);
             this.tokenBox.TabIndex = 3;
@@ -70,7 +86,7 @@ namespace GitApi
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 100);
+            this.label3.Location = new System.Drawing.Point(28, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 6;
@@ -79,7 +95,7 @@ namespace GitApi
             // projectBtn
             // 
             this.projectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.projectBtn.Location = new System.Drawing.Point(12, 321);
+            this.projectBtn.Location = new System.Drawing.Point(6, 241);
             this.projectBtn.Name = "projectBtn";
             this.projectBtn.Size = new System.Drawing.Size(139, 43);
             this.projectBtn.TabIndex = 7;
@@ -89,7 +105,7 @@ namespace GitApi
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(272, 61);
+            this.button1.Location = new System.Drawing.Point(272, 58);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 23);
             this.button1.TabIndex = 8;
@@ -100,7 +116,7 @@ namespace GitApi
             // deleteBtn
             // 
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.deleteBtn.Location = new System.Drawing.Point(157, 321);
+            this.deleteBtn.Location = new System.Drawing.Point(151, 241);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(143, 43);
             this.deleteBtn.TabIndex = 9;
@@ -112,14 +128,14 @@ namespace GitApi
             // 
             this.listBox.CheckOnClick = true;
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(12, 116);
+            this.listBox.Location = new System.Drawing.Point(6, 36);
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(288, 199);
             this.listBox.TabIndex = 10;
             // 
             // numPage
             // 
-            this.numPage.Location = new System.Drawing.Point(253, 90);
+            this.numPage.Location = new System.Drawing.Point(247, 10);
             this.numPage.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -145,7 +161,7 @@ namespace GitApi
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nameLabel.Location = new System.Drawing.Point(12, 9);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(288, 34);
+            this.nameLabel.Size = new System.Drawing.Size(304, 34);
             this.nameLabel.TabIndex = 12;
             this.nameLabel.Text = "Witaj użytkowniku";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,7 +169,7 @@ namespace GitApi
             // deleteAllBtn
             // 
             this.deleteAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.deleteAllBtn.Location = new System.Drawing.Point(12, 370);
+            this.deleteAllBtn.Location = new System.Drawing.Point(6, 290);
             this.deleteAllBtn.Name = "deleteAllBtn";
             this.deleteAllBtn.Size = new System.Drawing.Size(288, 40);
             this.deleteAllBtn.TabIndex = 13;
@@ -164,7 +180,7 @@ namespace GitApi
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 99);
+            this.checkBox1.Location = new System.Drawing.Point(9, 19);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 14;
@@ -174,9 +190,9 @@ namespace GitApi
             // addRepoBtn
             // 
             this.addRepoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addRepoBtn.Location = new System.Drawing.Point(306, 321);
+            this.addRepoBtn.Location = new System.Drawing.Point(6, 95);
             this.addRepoBtn.Name = "addRepoBtn";
-            this.addRepoBtn.Size = new System.Drawing.Size(143, 43);
+            this.addRepoBtn.Size = new System.Drawing.Size(288, 43);
             this.addRepoBtn.TabIndex = 15;
             this.addRepoBtn.Text = "dodaj";
             this.addRepoBtn.UseVisualStyleBackColor = true;
@@ -184,15 +200,15 @@ namespace GitApi
             // 
             // genRepoName
             // 
-            this.genRepoName.Location = new System.Drawing.Point(306, 256);
+            this.genRepoName.Location = new System.Drawing.Point(6, 30);
             this.genRepoName.Name = "genRepoName";
-            this.genRepoName.Size = new System.Drawing.Size(144, 20);
+            this.genRepoName.Size = new System.Drawing.Size(288, 20);
             this.genRepoName.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(306, 240);
+            this.label1.Location = new System.Drawing.Point(6, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 17;
@@ -201,7 +217,7 @@ namespace GitApi
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(306, 279);
+            this.label4.Location = new System.Drawing.Point(6, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 19;
@@ -209,7 +225,7 @@ namespace GitApi
             // 
             // genRepoNum
             // 
-            this.genRepoNum.Location = new System.Drawing.Point(309, 295);
+            this.genRepoNum.Location = new System.Drawing.Point(9, 69);
             this.genRepoNum.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -221,7 +237,7 @@ namespace GitApi
             0,
             0});
             this.genRepoNum.Name = "genRepoNum";
-            this.genRepoNum.Size = new System.Drawing.Size(141, 20);
+            this.genRepoNum.Size = new System.Drawing.Size(285, 20);
             this.genRepoNum.TabIndex = 20;
             this.genRepoNum.Value = new decimal(new int[] {
             1,
@@ -231,10 +247,10 @@ namespace GitApi
             // 
             // bar
             // 
-            this.bar.Location = new System.Drawing.Point(309, 388);
+            this.bar.Location = new System.Drawing.Point(9, 162);
             this.bar.Maximum = 10;
             this.bar.Name = "bar";
-            this.bar.Size = new System.Drawing.Size(141, 22);
+            this.bar.Size = new System.Drawing.Size(285, 22);
             this.bar.Step = 1;
             this.bar.TabIndex = 21;
             this.bar.Value = 1;
@@ -243,40 +259,179 @@ namespace GitApi
             // barLabel
             // 
             this.barLabel.AutoSize = true;
-            this.barLabel.Location = new System.Drawing.Point(306, 372);
+            this.barLabel.Location = new System.Drawing.Point(6, 146);
             this.barLabel.Name = "barLabel";
             this.barLabel.Size = new System.Drawing.Size(35, 13);
             this.barLabel.TabIndex = 22;
             this.barLabel.Text = "label5";
             this.barLabel.Visible = false;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.checkBox2);
+            this.tabPage3.Controls.Add(this.delAllGrpBtn);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.grpBtn);
+            this.tabPage3.Controls.Add(this.grpNumPage);
+            this.tabPage3.Controls.Add(this.grpListBox);
+            this.tabPage3.Controls.Add(this.delGrpBtn);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(300, 340);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Przeglądaj grupy";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.genRepoName);
+            this.tabPage2.Controls.Add(this.barLabel);
+            this.tabPage2.Controls.Add(this.addRepoBtn);
+            this.tabPage2.Controls.Add(this.bar);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.genRepoNum);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(300, 340);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Dodaj projekty";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 87);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(308, 366);
+            this.tabControl1.TabIndex = 23;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.deleteAllBtn);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.projectBtn);
+            this.tabPage1.Controls.Add(this.numPage);
+            this.tabPage1.Controls.Add(this.listBox);
+            this.tabPage1.Controls.Add(this.deleteBtn);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(300, 340);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Przeglądaj projekty";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(9, 19);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 21;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // delAllGrpBtn
+            // 
+            this.delAllGrpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.delAllGrpBtn.Location = new System.Drawing.Point(6, 290);
+            this.delAllGrpBtn.Name = "delAllGrpBtn";
+            this.delAllGrpBtn.Size = new System.Drawing.Size(288, 40);
+            this.delAllGrpBtn.TabIndex = 20;
+            this.delAllGrpBtn.Text = "Usuń wszystko";
+            this.delAllGrpBtn.UseVisualStyleBackColor = true;
+            this.delAllGrpBtn.Click += new System.EventHandler(this.delAllGrpBtn_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Lista grup";
+            // 
+            // grpBtn
+            // 
+            this.grpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.grpBtn.Location = new System.Drawing.Point(6, 241);
+            this.grpBtn.Name = "grpBtn";
+            this.grpBtn.Size = new System.Drawing.Size(139, 43);
+            this.grpBtn.TabIndex = 16;
+            this.grpBtn.Text = "Pokaż";
+            this.grpBtn.UseVisualStyleBackColor = true;
+            this.grpBtn.Click += new System.EventHandler(this.grpBtn_Click);
+            // 
+            // grpNumPage
+            // 
+            this.grpNumPage.Location = new System.Drawing.Point(247, 10);
+            this.grpNumPage.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.grpNumPage.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.grpNumPage.Name = "grpNumPage";
+            this.grpNumPage.Size = new System.Drawing.Size(47, 20);
+            this.grpNumPage.TabIndex = 19;
+            this.grpNumPage.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // grpListBox
+            // 
+            this.grpListBox.CheckOnClick = true;
+            this.grpListBox.FormattingEnabled = true;
+            this.grpListBox.Location = new System.Drawing.Point(6, 36);
+            this.grpListBox.Name = "grpListBox";
+            this.grpListBox.Size = new System.Drawing.Size(288, 199);
+            this.grpListBox.TabIndex = 18;
+            // 
+            // delGrpBtn
+            // 
+            this.delGrpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.delGrpBtn.Location = new System.Drawing.Point(151, 241);
+            this.delGrpBtn.Name = "delGrpBtn";
+            this.delGrpBtn.Size = new System.Drawing.Size(143, 43);
+            this.delGrpBtn.TabIndex = 17;
+            this.delGrpBtn.Text = "Usuń";
+            this.delGrpBtn.UseVisualStyleBackColor = true;
+            this.delGrpBtn.Click += new System.EventHandler(this.delGrpBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 415);
-            this.Controls.Add(this.barLabel);
-            this.Controls.Add(this.bar);
-            this.Controls.Add(this.genRepoNum);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.genRepoName);
-            this.Controls.Add(this.addRepoBtn);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.deleteAllBtn);
-            this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.numPage);
-            this.Controls.Add(this.listBox);
-            this.Controls.Add(this.deleteBtn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.projectBtn);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(333, 465);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.tokenBox);
+            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genRepoNum)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpNumPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +456,17 @@ namespace GitApi
         private System.Windows.Forms.NumericUpDown genRepoNum;
         private System.Windows.Forms.ProgressBar bar;
         private System.Windows.Forms.Label barLabel;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button delAllGrpBtn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button grpBtn;
+        private System.Windows.Forms.NumericUpDown grpNumPage;
+        private System.Windows.Forms.CheckedListBox grpListBox;
+        private System.Windows.Forms.Button delGrpBtn;
     }
 }
 

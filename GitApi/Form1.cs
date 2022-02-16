@@ -17,15 +17,20 @@ namespace GitApi
     public partial class Form1 : Form
     {
         List<JSON> jsons;
+        List<Group> jsonsGrp;
         string token, id;
         HttpClient client;
 
         public Form1()
         {
             InitializeComponent();
-            //createRepo();
         }
         
+
+        //user functions
+
+
+        //get section
         private void getUserID()
         {
             using (client = new HttpClient())
@@ -64,6 +69,41 @@ namespace GitApi
             }
         }
 
+        private void getGroup(string token)
+        {
+            getUserID();
+            using (client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                this.token = token;
+                var response = client.GetAsync($"https://gitlab.com/api/v4/groups?top_level_only=true").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = response.Content;
+                    string responseString = responseContent.ReadAsStringAsync().Result;
+                    deserializeJSONGroup(responseString);
+                }
+                else
+                    MessageBox.Show("Wprowadź poprawne dane");
+            }
+        }
+
+        //delete section
+        private void deleteGrp(string id)
+        {
+            getUserID();
+            using (client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                var response = client.DeleteAsync($"https://gitlab.com/api/v4/groups/{id}").Result;
+
+                if (response.IsSuccessStatusCode)
+                    Console.WriteLine("Pomyślnie usunięto grupę");
+                else
+                    Console.WriteLine("Grupa nie została usunięta");
+            }
+        }
+
         private void delete(string id)
         {
             getUserID();
@@ -99,6 +139,26 @@ namespace GitApi
             }
         }
 
+        private void deleteAllGrp()
+        {
+            DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz skasować wszystko?", "Potwierdzenie", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (jsonsGrp == null)
+                    getGroup(token);
+
+                while (jsonsGrp.Count > 0)
+                {
+                    for (int i = jsonsGrp.Count - 1; i == 0; i--)
+                    {
+                        delete(jsonsGrp[i].id.ToString());
+                        grpListBox.Items.Remove(grpListBox.Items[i]);
+                    }
+                    getGroup(token);
+                }
+            }
+        }
+
         private void deserializeJSONProject(string json)
         {
             JSON jsonObj;
@@ -114,6 +174,21 @@ namespace GitApi
             }
         }
 
+        private void deserializeJSONGroup(string json)
+        {
+            Group jsonObj;
+            jsonsGrp = JsonSerializer.Deserialize<List<Group>>(json);
+
+            if (grpListBox.Items.Count > 0)
+                grpListBox.Items.Clear();
+
+            for (int i = 0; i < jsonsGrp.Count; i++)
+            {
+                jsonObj = jsonsGrp[i];
+                grpListBox.Items.Add(jsonObj.name, false);
+            }
+        }
+
         private void deserializeJSONID(string json)
         {
             UserID jsonObj = JsonSerializer.Deserialize<UserID>(json);
@@ -122,16 +197,35 @@ namespace GitApi
             id = jsonObj.id.ToString();
         }
 
+
+        //Autogen forms functions
+
+
+        //get list
         private void projectBtn_Click(object sender, EventArgs e)
         {
             getProject(tokenBox.Text, (int)numPage.Value);
         }
 
+        private void grpBtn_Click(object sender, EventArgs e)
+        {
+            getGroup(tokenBox.Text);
+        }
+        
+        //token gen
         private void button1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://gitlab.com/-/profile/personal_access_tokens");
         }
 
+        //change site
+        private void numPage_ValueChanged(object sender, EventArgs e)
+        {
+            getProject(tokenBox.Text, (int)numPage.Value);
+            checkBox1.Checked = false;
+        }
+
+        //delete
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             for(int i = listBox.Items.Count - 1; i >= 0;  i--)
@@ -143,11 +237,17 @@ namespace GitApi
                 }
             }
         }
-
-        private void numPage_ValueChanged(object sender, EventArgs e)
+        
+        private void delGrpBtn_Click(object sender, EventArgs e)
         {
-            getProject(tokenBox.Text, (int)numPage.Value);
-            checkBox1.Checked = false;
+            for (int i = grpListBox.Items.Count - 1; i >= 0; i--)
+            {
+                if (grpListBox.GetItemChecked(i))
+                {
+                    grpListBox.Items.Remove(grpListBox.Items[i]);
+                    deleteGrp(jsonsGrp[i].id.ToString());
+                }
+            }
         }
 
         private void deleteAllBtn_Click(object sender, EventArgs e)
@@ -155,6 +255,11 @@ namespace GitApi
             deleteAll();
         }
 
+        private void delAllGrpBtn_Click(object sender, EventArgs e)
+        {
+            deleteAllGrp();
+        }
+        
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -165,6 +270,7 @@ namespace GitApi
                     listBox.SetItemChecked(i, false);
         }
 
+        //add repo
         private void addRepoBtn_Click(object sender, EventArgs e)
         {
             createRepo(genRepoName.Text, (int) genRepoNum.Value);
