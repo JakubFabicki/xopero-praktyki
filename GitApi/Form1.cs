@@ -359,6 +359,5 @@ namespace GitApi
             createRepo(genRepoName.Text, (int) genRepoNum.Value);
             getProject(tokenBox.Text, (int)numPage.Value);
         }
-
     }
 }

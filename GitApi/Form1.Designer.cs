@@ -90,7 +90,6 @@ namespace GitApi
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.Size = new System.Drawing.Size(306, 20);
             this.tokenBox.TabIndex = 3;
-            this.tokenBox.Text = "glpat-AL2AsHbBxoL_KqC13p46";
             // 
             // label3
             // 
