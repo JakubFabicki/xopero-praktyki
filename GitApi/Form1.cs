@@ -76,7 +76,7 @@ namespace GitApi
             {
                 client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
                 this.token = token;
-                var response = client.GetAsync($"https://gitlab.com/api/v4/groups?top_level_only=true").Result;
+                var response = client.GetAsync($"https://gitlab.com/api/v4/groups?top_level_only=false").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
@@ -115,7 +115,7 @@ namespace GitApi
                 if (response.IsSuccessStatusCode)
                     Console.WriteLine("Pomyślnie usunięto projekt");
                 else
-                    Console.WriteLine("Projekt nie został usunięty");
+                    Console.WriteLine("Projekt nie został usunięty " + response.StatusCode);
             }
         }
 
@@ -129,7 +129,7 @@ namespace GitApi
 
                 while (jsons.Count > 0)
                 {
-                    for (int i = jsons.Count - 1; i == 0; i--)
+                    for (int i = jsons.Count - 1; i >= 0; i--)
                     {
                         delete(jsons[i].id.ToString());
                         listBox.Items.Remove(listBox.Items[i]);
@@ -141,24 +141,101 @@ namespace GitApi
 
         private void deleteAllGrp()
         {
-            DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz skasować wszystko?", "Potwierdzenie", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz skasować wszystkie grupy??", "Uuwanie grupy", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 if (jsonsGrp == null)
-                    getGroup(token);
-
+                    getGroup(tokenBox.Text);
                 while (jsonsGrp.Count > 0)
                 {
-                    for (int i = jsonsGrp.Count - 1; i == 0; i--)
+                    Console.WriteLine("deleteAllGrp : 1 + " + jsonsGrp.Count);
+                    for (int i = jsonsGrp.Count - 1; i >= 0; i--)
                     {
-                        delete(jsonsGrp[i].id.ToString());
+                        Console.WriteLine("deleteAllGrp : 2");
+                        deleteGrp(jsonsGrp[i].id.ToString());
+                        Console.WriteLine("deleteAllGrp : 3");
                         grpListBox.Items.Remove(grpListBox.Items[i]);
+                        Console.WriteLine("deleteAllGrp : 4");
                     }
+                    Console.WriteLine("deleteAllGrp : 5");
                     getGroup(token);
                 }
             }
         }
 
+        //add section
+        private void createRepo(string name, int length)
+        {
+            using (client = new HttpClient())
+            {
+                token = tokenBox.Text;
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                barLabel.Visible = true;
+                bar.Visible = true;
+                barLabel.Text = $"0 / {length}";
+                bar.Minimum = 0;
+                bar.Maximum = length;
+                for (int i = 0; i < length; i++)
+                {
+                    var values = new List<KeyValuePair<string, string>>();
+                    values.Add(new KeyValuePair<string, string>("name", name + i.ToString()));
+                    var content = new FormUrlEncodedContent(values);
+                    var responsePost = client.PostAsync($"https://gitlab.com/api/v4/projects/", content).Result;
+                    if (responsePost.IsSuccessStatusCode)
+                    {
+                        Console.WriteLine("działa "+ i +" "+responsePost.StatusCode);
+                        if(bar.Value < bar.Maximum)
+                            bar.Value++;
+                        barLabel.Text = $"{bar.Value} / {bar.Maximum}";
+                    }
+                    else
+                    {
+                        Console.WriteLine("działa nie " + responsePost.StatusCode);
+                        bar.Maximum--;
+                        barLabel.Text = $"{bar.Value} / {bar.Maximum}";
+                        if (bar.Value > 0)
+                            bar.Value--;
+                    }
+                }
+                barLabel.Visible = false;
+                bar.Visible = false;
+                bar.Value = 0;
+            }
+        }
+
+        private void createGroup(string name, int length)
+        {
+            using (client = new HttpClient())
+            {
+                token = tokenBox.Text;
+                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
+                for (int i = 0; i < length; i++)
+                {
+                    Group jsonObj;
+
+                    for(int j = grpListBox.Items.Count - 1; j >= 0 ; j--)
+                    {
+                        jsonObj = jsonsGrp[j];
+                        if (grpListBox.GetItemChecked(j))
+                        {
+                            var values = new List<KeyValuePair<string, string>>();
+                            
+                            values.Add(new KeyValuePair<string, string>("name", name));
+                            values.Add(new KeyValuePair<string, string>("path", name + i.ToString()));
+                            values.Add(new KeyValuePair<string, string>("parent_id", $"{jsonObj.id}"));
+
+                            var content = new FormUrlEncodedContent(values);
+
+                            var responsePost = client.PostAsync($"https://gitlab.com/api/v4/groups/", content).Result;
+                            if (responsePost.IsSuccessStatusCode)
+                                grpListBox.Items.Add(jsonObj.full_name, false);
+                        }
+                    }
+                }
+            }
+        }
+
+        //write data section
         private void deserializeJSONProject(string json)
         {
             JSON jsonObj;
@@ -185,7 +262,7 @@ namespace GitApi
             for (int i = 0; i < jsonsGrp.Count; i++)
             {
                 jsonObj = jsonsGrp[i];
-                grpListBox.Items.Add(jsonObj.name, false);
+                grpListBox.Items.Add(jsonObj.full_name, false);
             }
         }
 
@@ -270,50 +347,18 @@ namespace GitApi
                     listBox.SetItemChecked(i, false);
         }
 
-        //add repo
+        //add 
+        private void addGrpBtn_Click(object sender, EventArgs e)
+        {
+            createGroup(genGrpName.Text, (int)genRepoNum.Value);
+            getGroup(tokenBox.Text);
+        }
+        
         private void addRepoBtn_Click(object sender, EventArgs e)
         {
             createRepo(genRepoName.Text, (int) genRepoNum.Value);
             getProject(tokenBox.Text, (int)numPage.Value);
         }
 
-        private void createRepo(string name, int length)
-        {
-            using (client = new HttpClient())
-            {
-                token = tokenBox.Text;
-                client.DefaultRequestHeaders.Add("PRIVATE-TOKEN", token);
-                barLabel.Visible = true;
-                bar.Visible = true;
-                barLabel.Text = $"0 / {length}";
-                bar.Minimum = 0;
-                bar.Maximum = length;
-                for (int i = 0; i < length; i++)
-                {
-                    var values = new List<KeyValuePair<string, string>>();
-                    values.Add(new KeyValuePair<string, string>("name", name + i.ToString()));
-                    var content = new FormUrlEncodedContent(values);
-                    var responsePost = client.PostAsync($"https://gitlab.com/api/v4/projects/", content).Result;
-                    if (responsePost.IsSuccessStatusCode)
-                    {
-                        Console.WriteLine("działa "+ i +" "+responsePost.StatusCode);
-                        if(bar.Value < bar.Maximum)
-                            bar.Value++;
-                        barLabel.Text = $"{bar.Value} / {bar.Maximum}";
-                    }
-                    else
-                    {
-                        Console.WriteLine("działa nie " + responsePost.StatusCode);
-                        bar.Maximum--;
-                        barLabel.Text = $"{bar.Value} / {bar.Maximum}";
-                        if (bar.Value > 0)
-                            bar.Value--;
-                    }
-                }
-                barLabel.Visible = false;
-                bar.Visible = false;
-                bar.Value = 0;
-            }
-        }
     }
 }
