@@ -14,40 +14,54 @@ namespace speedTestGitApi
         static HttpClient client;
         static string rezultat;
 
+        static int time;
         static void Main(string[] args)
         {
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
-            getProject();
-            getProject(2);
-            getProject(3);
-            getProject(4);
-            getProject(5);
-            watch.Stop();
-            Console.WriteLine(rezultat);
+            //for(int i = 0; i < 20; i++)
+            //{
+            //    Stopwatch watch = new Stopwatch();
+            //    watch.Start();
+            //    getProject();
+            //    getProject(2);
+            //    getProject(3);
+            //    getProject(4);
+            //    getProject(5);
+            //    watch.Stop();
+            //    time += (int)watch.ElapsedMilliseconds;
+            //    Console.WriteLine(watch.ElapsedMilliseconds);
+            //}
+
+            //Console.WriteLine("Średnia main wątku to: " + (time / 5));
 
             rezultat = null;
+            time = 0;
 
-            Stopwatch watch2 = new Stopwatch();
-            watch2.Start(); 
-            Thread watki = new Thread(new ThreadStart(() => getProject()));
-            watki.Start();
-            Thread watki2 = new Thread(new ThreadStart(() => getProject(2)));
-            watki2.Start();
-            Thread watki3 = new Thread(new ThreadStart(() => getProject(3)));
-            watki3.Start();
-            Thread watki4 = new Thread(new ThreadStart(() => getProject(4)));
-            watki4.Start();
-            Thread watki5 = new Thread(new ThreadStart(() => getProject(5)));
-            watki5.Start();
 
-            watki.Join();
-            watki2.Join();
+            for (int i = 0; i < 20; i++)
+            {
+                Stopwatch watch = new Stopwatch();
+                watch.Start();
+                Thread watki = new Thread(new ThreadStart(() => getProject()));
+                watki.Start();
+                Thread watki2 = new Thread(new ThreadStart(() => getProject(2)));
+                watki2.Start();
+                Thread watki3 = new Thread(new ThreadStart(() => getProject(3)));
+                watki3.Start();
+                Thread watki4 = new Thread(new ThreadStart(() => getProject(4)));
+                watki4.Start();
+                Thread watki5 = new Thread(new ThreadStart(() => getProject(5)));
+                watki5.Start();
+                watki.Join();
+                watki2.Join();
+                watki3.Join();
+                watki4.Join();
+                watki5.Join();
+                watch.Stop();
+                time += (int)watch.ElapsedMilliseconds;
+                Console.WriteLine(watch.ElapsedMilliseconds);
+            }
 
-            watch2.Stop();
-            Console.WriteLine(rezultat);
-            Console.WriteLine(watch.ElapsedMilliseconds);
-            Console.WriteLine(watch2.ElapsedMilliseconds);
+            Console.WriteLine("Średnia main wątku to: " + (time / 20));
         }
 
         private static void getProjectTheard(int i)
