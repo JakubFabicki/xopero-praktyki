@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "githubIssues", "githubIssue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kurs walut - email", "Kurs walut - email\Kurs walut - email.csproj", "{BCB98897-0091-4B09-94CB-9D0A27878F6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelV2", "ExcelV2\ExcelV2.csproj", "{2F80B75F-4CAF-471F-98B9-A467C18EF380}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{BCB98897-0091-4B09-94CB-9D0A27878F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCB98897-0091-4B09-94CB-9D0A27878F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCB98897-0091-4B09-94CB-9D0A27878F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F80B75F-4CAF-471F-98B9-A467C18EF380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F80B75F-4CAF-471F-98B9-A467C18EF380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F80B75F-4CAF-471F-98B9-A467C18EF380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F80B75F-4CAF-471F-98B9-A467C18EF380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
