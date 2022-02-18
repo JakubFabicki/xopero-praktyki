@@ -25,10 +25,22 @@ namespace ExcelV2
         private void splitText(string path)
         {
             dataGridView1.Rows.Clear();
+
             foreach (string line in File.ReadLines(path))
             {
-                string[] subs = line.Split(';');
-                dataGridView1.Rows.Add(subs);
+                string[] subs = null;
+                if (charBox.Text.Length == 1)
+                {
+                    subs = line.Split(char.Parse(charBox.Text));
+                    dataGridView1.Rows.Add(subs);
+                }
+                else if (charBox.Text.Length < 1)
+                {
+                    subs = line.Split(';', ',', '\t');
+                    dataGridView1.Rows.Add(subs);
+                }
+                else
+                    MessageBox.Show("Wprowadzono za dużo znaków!");
             }
         }
 

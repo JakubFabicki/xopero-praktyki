@@ -32,6 +32,8 @@ namespace ExcelV2
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.charBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +68,30 @@ namespace ExcelV2
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
+            // charBox
+            // 
+            this.charBox.Location = new System.Drawing.Point(731, 12);
+            this.charBox.Name = "charBox";
+            this.charBox.Size = new System.Drawing.Size(24, 20);
+            this.charBox.TabIndex = 3;
+            this.charBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(611, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Wprowadź własny znak ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 398);
+            this.Controls.Add(this.charBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.openBtn);
             this.Controls.Add(this.dataGridView1);
@@ -78,6 +99,7 @@ namespace ExcelV2
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -86,6 +108,8 @@ namespace ExcelV2
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button openBtn;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.TextBox charBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 
