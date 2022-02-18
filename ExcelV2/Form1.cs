@@ -27,7 +27,7 @@ namespace ExcelV2
             dataGridView1.Rows.Clear();
             foreach (string line in File.ReadLines(path))
             {
-                string[] subs = line.Split(',');
+                string[] subs = line.Split(';');
                 dataGridView1.Rows.Add(subs);
             }
         }
