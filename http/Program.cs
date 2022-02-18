@@ -8,46 +8,45 @@ namespace ListenerExample
     {
         static void Main(string[] args)
         {
-            // Create and start a listener.
-            var listener = new HttpListener();
-            var url = (args.Length > 0) ? args[0] : "http://localhost:9000/api/cs/";
-            listener.Prefixes.Add(url);
-            listener.Start();
+            //Declare the variables
 
-            // Announce that it's running.
-            Console.WriteLine("Listening. Please submit requests to: {0}", url);
 
-            while (true)
+            String S1;
+
+            String S2 = "";
+            int i;
+            int c = 1;
+            Console.WriteLine("Run Length Encoder");
+
+            Console.WriteLine("Enter a String");
+
+            S1 = Console.ReadLine();
+
+            Console.WriteLine("You Entered : " + S1);
+            S1 = S1 + " ";
+
+            //Console.ReadLine();
+
+            //Compress Using Run Length Encoding 
+
+            for (i = 0; i < S1.Length - 1; i++)
             {
-                // Wait for a request.
-                var context = listener.GetContext();
-                var request = context.Request;
-
-                // Display some information about the request.
-                Console.WriteLine("Full URL: {0}", request.Url.OriginalString);
-                Console.WriteLine("    Path: {0}", request.Url.PathAndQuery);
-
-                // Break from the loop if it's the poison pill (a DELETE request).
-                if (request.HttpMethod == "DELETE")
+                if (S1[i] == S1[i + 1])
+                {      //When same increment counter
+                    c++;
+                }
+                else
                 {
-                    Console.WriteLine("Asked to stop.");
-                    break;
+
+                    S2 += S1[i];
+                    S2 += c;
+                    c = 1;
                 }
 
-                // Send a response.
-                var response = context.Response;
-                string responseString = "Hello from C#";
-                byte[] buffer = Encoding.UTF8.GetBytes(responseString);
-                response.ContentLength64 = buffer.Length;
-                response.ContentType = "text/html";
-                var output = response.OutputStream;
-                output.Write(buffer, 0, buffer.Length);
-                output.Close();
-                response.Close();
             }
-            // Stop listening.
-            listener.Stop();
-            System.Environment.Exit(1);
+            Console.WriteLine("Output" + "\n" + S2);
+
+            Console.ReadLine();
         }
     }
 }

@@ -11,3 +11,17 @@ C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\http\obj\Debug\netcor
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.dll
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.pdb
 C:\Users\xopero\source\repos\Jakub Fabicki\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.genruntimeconfig.cache
+C:\Users\fabiu\source\repos\xopero-praktyki\http\bin\Debug\netcoreapp3.1\http.exe
+C:\Users\fabiu\source\repos\xopero-praktyki\http\bin\Debug\netcoreapp3.1\http.deps.json
+C:\Users\fabiu\source\repos\xopero-praktyki\http\bin\Debug\netcoreapp3.1\http.runtimeconfig.json
+C:\Users\fabiu\source\repos\xopero-praktyki\http\bin\Debug\netcoreapp3.1\http.runtimeconfig.dev.json
+C:\Users\fabiu\source\repos\xopero-praktyki\http\bin\Debug\netcoreapp3.1\http.dll
+C:\Users\fabiu\source\repos\xopero-praktyki\http\bin\Debug\netcoreapp3.1\http.pdb
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.csproj.AssemblyReference.cache
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.AssemblyInfoInputs.cache
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.AssemblyInfo.cs
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.csproj.CoreCompileInputs.cache
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.dll
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.pdb
+C:\Users\fabiu\source\repos\xopero-praktyki\http\obj\Debug\netcoreapp3.1\http.genruntimeconfig.cache

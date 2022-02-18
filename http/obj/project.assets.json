@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\xopero\\.nuget\\packages\\": {}
+    "C:\\Users\\fabiu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\http\\http.csproj",
+      "projectUniqueName": "C:\\Users\\fabiu\\source\\repos\\xopero-praktyki\\http\\http.csproj",
       "projectName": "http",
-      "projectPath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\http\\http.csproj",
-      "packagesPath": "C:\\Users\\xopero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xopero\\source\\repos\\Jakub Fabicki\\xopero-praktyki\\http\\obj\\",
+      "projectPath": "C:\\Users\\fabiu\\source\\repos\\xopero-praktyki\\http\\http.csproj",
+      "packagesPath": "C:\\Users\\fabiu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fabiu\\source\\repos\\xopero-praktyki\\http\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xopero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fabiu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
